@@ -1,0 +1,14 @@
+SELECT 
+    so.*, 
+    o.*, 
+    t.*
+FROM 
+    sale_order AS so
+INNER JOIN 
+    `order` AS o 
+ON 
+    so.id = o.saleId
+INNER JOIN 
+    tiket AS t 
+ON 
+    so.tiketId = t.id;
